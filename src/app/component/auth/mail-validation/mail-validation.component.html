@@ -1,0 +1,27 @@
+
+
+<div class="container">
+    <div class="row center">
+     <div>
+         <img src="assets/verif_mail.jpg" alt="">
+     </div>
+        <div class=" form">
+            <h1 class="title">Vérification</h1>
+            <h5 class="description mb-5">Entrez le code de véfication que nous venons
+                de vous envoyer sur votre Email.</h5>
+         
+                    <div class="field mt-5 mb-2">
+                       
+ 
+                        <p-inputNumber  [useGrouping]="false" [inputStyle]="{'width': '100%'}" placeholder="Code de véfication" [(ngModel)]="val" [style]="{'width':'100%'}" ></p-inputNumber>
+
+                    </div>
+                   
+                    <button (click)="submit()" [loading]="isLoading" [style]="{'width': '100%'}" pButton pRipple type="button" label="Vérifer" class="p-button-raised" styleClass="p-button-sm"></button>
+         
+         <hr>
+         <p class="signUp"> return to login page? <a routerLink="/auth/login"> <b><i class="fa fa-arrow-left" aria-hidden="true"></i></b> </a></p>
+        </div>
+    
+    </div>
+</div>

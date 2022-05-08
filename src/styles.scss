@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #ffffff!important;
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.p-input-icon-right>i {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+p-inputnumber{
+    width: 100%!important;
+}

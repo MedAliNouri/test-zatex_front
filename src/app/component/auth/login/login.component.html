@@ -1,0 +1,37 @@
+
+<div class="container">
+    <div class="row center">
+        <div  class="col ">
+<section>
+    <img src="assets/signIn.jpg" alt="">
+</section>
+        </div>
+        <div class="col form">
+            <h1 class="title">Sign In </h1>
+            <h5 class="description">Connectez-vous avec nous pour bénéficier de services de monitoring
+                temps réel.</h5>
+                <form [formGroup]="contactForm" class="inputs">
+                    <div class="field">
+                       
+                        <input formControlName="email" placeholder="Email" style="width: 100%;" [ngClass]="{'ng-invalid': isControlHasError('email','required')  && submited}"  pInputText />
+                        <small  id="username2-help" class="p-error block" *ngIf="isControlHasError('email','required')  && submited">Email is required.</small>
+                        <small  id="username2-help" class="p-error block" *ngIf="isControlHasError('email','email') && submited">Email is not valid.</small>
+                    </div>
+                    <div class="field password">
+                      
+                        <p-password  formControlName="password" placeholder="password" [inputStyle]="{'width': '100%'}" [style]="{'width': '100%'}" [feedback]="false" ></p-password>
+                        <small  class="p-error block" *ngIf="isControlHasError('password','required') && submited">Password is required.</small>
+                    </div>
+                    <div class="forgetPss">
+                     <a ><p routerLink="/auth/send_mail_reset_pass">Forget password ?</p></a>   
+                    </div>
+                    <button (click)="submit()" [loading]="isLoading" [style]="{'width': '100%'}" pButton pRipple type="button" label="login" class="p-button-raised" styleClass="p-button-sm"></button>
+                </form>
+         <hr>
+         <div>
+           <p class="signUp"> Vous n'avez pas de compte? <a routerLink="/auth/register"> <b>Sign up</b> </a></p>  
+         </div>
+        </div>
+    
+    </div>
+</div>

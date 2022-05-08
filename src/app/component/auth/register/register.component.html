@@ -1,0 +1,50 @@
+
+<div class="container">
+    <div class="row center">
+        
+        <div class="col-sm-6 form">
+            <h1 class="title">Créer un compte</h1>
+            <h5 class="description">Inscrivez-vous avec nous pour obtenir vos
+                services où que vous soyer.Cette opération ne prend
+                que 2 minutes.</h5>
+                <form   [formGroup]="registerForm" class="inputs">
+                    <div class="field">
+                       
+                        <input formControlName="name_lastName" placeholder="nom et prénom" style="width: 100%;" [ngClass]="{'ng-invalid': isControlHasError('name_lastName','required')  && submited}"  pInputText />
+                        <small  id="username2-help" class="p-error block" *ngIf="isControlHasError('name_lastName','required')  && submited">Name and lastName is required.</small>
+                       
+                    </div>
+                    <div class="field password">
+                      
+                        <input  formControlName="email" placeholder="Email"  [ngClass]="{'ng-invalid': isControlHasError('email','required')  && submited}" [style]="{'width': '100%'}" pInputText >
+                        <small  class="p-error block" *ngIf="isControlHasError('email','required') && submited">Email is required.</small>
+                        <small  class="p-error block" *ngIf="isControlHasError('email','email') && submited">Email is not valid.</small>
+                    </div>
+                    <div class="field password">
+                      
+                        <p-password  formControlName="password" placeholder="password" [inputStyle]="{'width': '100%'}" [style]="{'width': '100%'}"  ></p-password>
+                        <small  class="p-error block" *ngIf="isControlHasError('password','required') && submited">Password is required.</small>
+                    </div>
+                    <div class="field password">
+                      
+                        <p-password  formControlName="confirmationPassword" placeholder="password" [inputStyle]="{'width': '100%'}" [style]="{'width': '100%'}" [feedback]="false" ></p-password>
+                        <small  class="p-error block" *ngIf="isControlHasError('confirmationPassword','required') && submited">Password is required.</small>
+                        <small  class="p-error block" *ngIf="isControlHasError('confirmationPassword','confirmedValidator') && submited">Passwords not match.</small>
+                    </div>
+                    <div class="forgetPss">
+                    
+                    </div>
+                    <button (click)="submit()" [loading]="isLoading" [style]="{'width': '100%'}" pButton pRipple type="button" label="Sign Up" class="p-button-raised" styleClass="p-button-sm"></button>
+                </form>
+         <hr>
+         <div>
+           <p class="signUp"> Vous avez déjà compte? <a routerLink="/auth/login"> <b>Sign in</b> </a></p>  
+         </div>
+        </div>
+        <div  class="col-sm-6 ">
+
+            <img style="    margin-top: 30%;" src="assets/signup.jpg" alt="">
+        
+                </div>
+    </div>
+</div>

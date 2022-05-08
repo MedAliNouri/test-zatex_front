@@ -3,14 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { AuthModule } from './component/auth/auth.module';
+import { DashboardModule } from './component/dashboard/dashboard.module';
+import { ContentLayoutComponent } from './shared/component/content-layout/content-layout.component';
+import { SharedModule } from './shared/shared.module';
+import { HeaderComponent } from './shared/component/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+   
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    AuthModule,
+    DashboardModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,52 @@
+
+.center{
+
+width: 800px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+}
+section>img{
+    margin: auto;
+    width: 300px;
+}
+.form{
+    padding: 20px;
+}
+.inputs{
+    margin-top: 66px;
+}
+.title{
+    font-size: 47px;
+    font-weight: 700;
+}
+.description{
+    font-size: 17px;
+    color: #818181
+}
+.password{
+    margin-top: 20px;
+}
+.signUp>a{
+text-decoration: none;
+font-size: 20px;
+color: #3B82F6;
+cursor: pointer;
+}
+.forgetPss>a{
+    text-decoration: none;
+    
+    color: #3B82F6;
+    cursor: pointer;
+    }
+    :host >>>  .p-input-icon-right > .p-inputtext {
+        padding-right: 2.5rem;
+        width: 100%!important;
+    }
+    .forgetPss >a{
+        text-align: end;
+        text-decoration: none;
+    }
